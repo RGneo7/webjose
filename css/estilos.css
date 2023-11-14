@@ -1,0 +1,787 @@
+/* ::::::::::::::::: Genericos :::::::::::::::::::: */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* :::::::::::::::::::::::: Texto :::::::::::::::::::::::::: */
+/*esto es para las instalaciones de la typografia*/
+@font-face {
+  font-family: 'OpenSans_ExtraBoldItalic';
+  src: url(../typografia/OpenSans-ExtraBoldItalic.ttf);
+}
+@font-face {
+  font-family: 'OpenSans_MediumItalic';
+  src: url(../typografia/OpenSans_SemiCondensed-MediumItalic.ttf);
+}
+@font-face {
+  font-family: 'OpenSans_Light';
+  src: url(../typografia/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: 'FuturaStd_BoldOblique';
+  src: url(../typografia/FuturaStd-BoldOblique.otf);
+}
+@font-face {
+  font-family: 'FuturaStd_Condensed';
+  src: url(../typografia/FuturaStd-Condensed.otf);
+} 
+@font-face {
+  font-family: 'FuturaStd_LightOblique' ;
+  src: url(../typografia/FuturaStd-LightOblique.otf);
+}
+
+.font_extra_bold_italic {
+  font-family: 'OpenSans_ExtraBoldItalic';
+}
+.font_medium_italic {
+  font-family: 'OpenSans_MediumItalic';
+}
+.font_Light {
+  font-family: 'OpenSans_Light';
+}
+.font_bold_oblique {
+  font-family: 'FuturaStd_BoldOblique';
+}
+.font_condensed {
+  font-family: 'FuturaStd_Condensed';
+} 
+.font_light_oblique {
+  font-family: 'FuturaStd_LightOblique' ;
+}
+/*esto es para las instalaciones de la typografia*/
+
+  /* ..........Color de texto........... */
+  .tc_blanco{
+    color: #fff;
+  }.tc_negro{
+    color: #000;
+  }.tc_gris{
+    color: #c0c0c0;
+  }.tc_gris_fuerte{
+    color: #3c3c3c;
+  }.tc_negro_liviano{
+    color: #292929;
+  }.tc_rojo{
+    color: #ff0000;
+  }.tc_amarillo{
+    color: #ffd900;
+  }
+  
+  /* .................. Tamaño del texto ................... */
+  /* porcentaje base, solo en el body */
+    body {
+        line-height:0.8;
+        font-size:100%;
+    }
+    .tt05 {
+        font-size:0.5em;
+    }.tt08 {
+        font-size:0.8em;
+    }.tt1 {
+        font-size:1em;
+    }.tt2 {
+        font-size:2em;
+    }.tt3 {
+        font-size:3em;
+    }.tt4 {
+        font-size:4em;
+    }.tt7 {
+        font-size:7em;
+    }.tt10 {
+        font-size:10em;
+    }.tt20 {
+        font-size:20em;
+    }
+  
+
+  /* alineacion de texto */
+  .ta_center{
+    text-align: center;
+  }.ta_derecha{
+    text-align: right;
+  }.ta_izquierda{
+    text-align: left;
+  }.ta_justificado{
+    text-align: justify;
+  }
+
+  .mayuscula{
+    text-transform: uppercase;
+  }
+  
+/* :::::::::::::::: BODY ::::::::::::::::: */
+
+
+/* .........Color de fondo......... */
+.fc_negro{
+  background-color: #000;
+}.fc_gris_liviano{
+  background-color: #cecece;
+}.fc_gris{
+  background-color: #c0c0c0;
+}.fc_gris_fuerte{
+  background-color: #3c3c3c;
+}.fc_negro_liviano{
+  background-color: #292929;
+}.fc_rojo{
+  background-color: #ff0000;
+}.fc_amarillo{
+  background-color: #ffd900;
+}
+
+/* ............... Tamaño en horizontal y vertical ................ */
+.th1{
+  height: 1vh;
+}.th5{
+  height: 5vh;
+}.th10{
+  height: 10vh;
+}.th20{
+  height: 20vh;
+}.th30{
+  height: 30vh;
+}.th40{
+  height: 40vh;
+}.th100{
+  height: 100%;
+}
+
+.tw100{
+    width: 100%;
+}.tw1{
+  width: 1vw;
+}
+
+
+/* ......................... otros .........................*/
+.ocultar-p{
+  display: none;
+  visibility: hidden;
+}
+
+.z1{
+  position:relative;
+  z-index:1;
+}.z2{
+  position:relative;
+  z-index:2;
+}.z3{
+  position:relative;
+  z-index:3;
+}.-z1{
+  z-index: -1;
+}.-z2{
+  z-index: -2;
+}.-z3{
+  z-index: -3;
+}
+
+
+/* ::::::::::::: grid :::::::::::::::: */  
+.grid{
+  display: grid;
+  gap: 0px;
+  width: 100%;
+}
+
+.grid-v-center{
+  align-items: center;
+}
+.grid-h-derecha{
+  justify-content: right;
+}
+.grid-h-center{
+  justify-content: center;
+}
+
+.col-1{
+  grid-template-columns: 1fr;
+}.col-2{
+  grid-template-columns: repeat(2, 1fr);
+}.col-3{
+  grid-template-columns: repeat(3, 1fr);
+}.col-4{
+  grid-template-columns: repeat(4, 1fr);
+}.col-5{
+  grid-template-columns: repeat(5, 1fr);
+}.col-6{
+  grid-template-columns: repeat(6, 1fr);
+}.col-7{
+  grid-template-columns: repeat(7, 1fr);
+}.col-8{
+  grid-template-columns: repeat(8, 1fr);
+}.col-9{
+  grid-template-columns: repeat(9, 1fr);
+}.col-10{
+  grid-template-columns: repeat(10, 1fr);
+}.col-11{
+  grid-template-columns: repeat(11, 1fr);
+}.col-12{
+  grid-template-columns: repeat(12, 1fr);
+}
+
+
+  /*.................... MENU ......................*/
+  header{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+  }
+  header img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 10vh;
+  }
+  nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav a{
+    font-weight: bold;
+    margin: 0px 2px;
+  }
+
+  .logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+/*........................ MAIN ......................*/
+main{
+  margin-bottom: 5vh;
+}
+
+
+/* ............ pagina inicio ................. */
+.p_inicio{
+  text-align: center;
+}
+
+.img1{
+  background-image: url('../img/001.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+
+/* ............ pagina estudios ............ */
+.caja_estudio_1{
+  width: 100%;
+  height: auto;
+  padding: 5px 5px 0px 5px;
+}
+.caja_estudio_1_texto{
+  line-height: 0.9;
+  position: relative;
+    padding-left: 10px;
+    top: 70%;
+}
+.icono_estudio_1{
+  background-image: url('../img/estudios_simbolo_01.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40%;
+  min-height: 10vh;
+}
+.img_estudios_1{
+  background-image: url('../img/estudios_01.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: relative;
+  min-height: 20vh;
+  height: 100%;
+}
+
+.caja_estudio_2{
+  width: 100%;
+  height: auto;
+  padding: 5px 5px 0px 5px;
+}
+.caja_estudio_2_texto{
+  line-height: 0.9;
+  position: relative;
+  top: 35%;
+}
+.icono_estudio_2{
+  background-image: url('../img/estudios_simbolo_02.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40%;
+  min-height: 10vh;
+}
+.img_estudios_2{
+  background-image: url('../img/estudios_02.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 30vh;
+  position:relative;
+  left:0px;
+  bottom: 0vh;
+}
+
+.caja_estudio_3{
+  width: 100%;
+  height: auto;
+  padding: 5px 5px 0px 5px;
+}
+.caja_estudio_3_texto{
+  line-height: 0.9;
+  position: relative;
+  top: 30px;
+}
+.icono_estudio_3{
+  background-image: url('../img/estudios_simbolo_03.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40%;
+  min-height: 10vh;
+}
+
+.img_estudios_3{
+  background-image: url('../img/estudios_03.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 30vh;
+  position:relative;
+  left:0px;
+  bottom: 0vh;
+}
+
+
+/* ............ Pagina habilidades ............ */
+#habilidades{
+  line-height: 1;
+}
+#habilidades > h1{
+  margin: 25px;
+}
+
+.img_habilidad{
+  background-image: url('../img/mano_con_raton.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  min-height: 30vh;
+  height: 40vh;
+}
+
+.lista_habilidades{
+  border-radius: 25px;
+  padding: 25px;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+.lista_habilidades > ul{
+  margin-left: 25px;
+}
+.lista_habilidades > ul > li{
+  padding: 25px 0px 25px 0px;
+}
+
+
+/* ............ pagina servicios ............ */
+.caja_servicio_1{
+  line-height: 2;
+  padding: 10px;
+}
+
+.caja_servicio_1 > ul{
+  margin-left: 30px;
+}
+
+.caja_servicio_1 > p{
+  padding: 10px;
+}
+
+.servicio_titulo1{
+  padding: 15px;
+}
+
+.img_servicio_1{
+  background-image: url('../img/imagen_servicios.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 20vh;
+  width: 150%;
+  height: 60%;
+  position: relative;
+  left: 0px;
+  top: 40%;
+}
+
+.caja_servicio_1-1{
+  position: relative;
+  bottom: 50px;
+}
+
+.caja_servicio_2{
+  position: relative;
+  right: 10px;
+}
+.caja_servicio_3{
+  line-height: 1;
+  padding: 15px;
+}
+
+/* ............ pagina de contacto ............ */
+
+.img_contacto_1{
+  background-image: url('../img/imagen_de_contacto.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  min-height: 30vh;
+  height: 100%;
+}
+
+.caja_contacto{
+  line-height: 1;
+  padding: 20px;
+}
+.caja_contacto > form > p {
+  margin-bottom: 25px;
+}
+
+.input{
+  width: 100%;
+  font-family: 'OpenSans_Light';
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 2px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+
+.boton{
+  text-align: center;
+  padding: 7px 21px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+  /*............FOOTER...........*/
+footer{
+    padding: 10px;
+    background-color: #000;
+    
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+}
+
+/* ::::::::::::::::::::::: Media querys::::::::::::::::::::::::: */
+  /* pantallas de telefonos */
+  @media (min-width: 575px) {
+  
+    body {
+      font-size:120%;
+    }
+  
+    header h1{
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    
+    nav{
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    nav a{
+      margin: 0px 5px;
+    }
+
+    .logo{
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-bottom: 0px;
+    }
+
+    .ocultar-p{
+      display: flex;
+      visibility: visible;
+    }
+    .grid-col-2{
+      grid-column: span 2;
+    }.grid-col-3{
+      grid-column: span 3;
+    }.grid-col-4{
+      grid-column: span 4;
+    }.grid-col-5{
+      grid-column: span 5;
+    }.grid-col-6{
+      grid-column: span 6;
+    }.grid-col-7{
+      grid-column: span 7;
+    }.grid-col-8{
+      grid-column: span 8;
+    }
+    
+    .grid-row-2{
+      grid-row: span 2;
+    }.grid-row-3{
+      grid-row: span 3;
+    }.grid-row-4{
+      grid-row: span 4;
+    }.grid-row-5{
+      grid-row: span 5;
+    }.grid-row-6{
+      grid-row: span 6;
+    }
+  
+    .col-m-1{
+      grid-template-columns: 1fr;
+    }.col-m-2{
+      grid-template-columns: repeat(2, 1fr);
+    }.col-m-3{
+      grid-template-columns: repeat(3, 1fr);
+    }.col-m-4{
+      grid-template-columns: repeat(4, 1fr);
+    }.col-m-5{
+      grid-template-columns: repeat(5, 1fr);
+    }.col-m-6{
+      grid-template-columns: repeat(6, 1fr);
+    }.col-m-7{
+      grid-template-columns: repeat(7, 1fr);
+    }.col-m-8{
+      grid-template-columns: repeat(8, 1fr);
+    }.col-m-9{
+      grid-template-columns: repeat(9, 1fr);
+    }.col-m-10{
+      grid-template-columns: repeat(10, 1fr);
+    }.col-m-11{
+      grid-template-columns: repeat(11, 1fr);
+    }.col-m-12{
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+
+        
+    .p_inicio{
+      text-align: left;
+    }
+
+
+    /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
+
+
+    /* ............ pagina estudios ............ */
+    .caja_estudio_1{
+      height: 30vh;
+      padding: 25px 0px 0px 0px;
+    }
+    .caja_estudio_1_texto{
+      padding-left: 10px;
+      top: 45%;
+    }
+    .icono_estudio_1{
+      position: relative;
+      top: 15%;
+    }
+    .img_estudios_1{
+      min-height: 32vh;
+      left:0px;
+      bottom: 7vh;
+      padding-right: 2vw;
+    }
+
+    .caja_estudio_2{
+      height: 30vh;
+    }
+    .caja_estudio_2_texto{
+      top: 0%;
+      padding: 25px 25px 0px 25px;
+    }
+    .icono_estudio_2{
+      position: relative;
+      top: 15%;
+    }
+    .icono_estudio_3{
+      position: relative;
+      top: 15%;
+    }
+    .img_estudios_2{
+      min-height: 40vh;
+      left:0px;
+      bottom: 12vh;
+    }
+
+    .caja_estudio_3{
+      height: 30vh;
+    }
+    .img_estudios_3{
+      min-height: 40vh;
+      left:0px;
+      bottom: 12vh;
+    }
+
+
+    
+    /* ............ pagina habilidades ............ */
+    .img_habilidad{
+      background-position: left;
+      height: 90vh;
+    }
+    .lista_habilidades{
+      border-radius: 25px;
+      padding: 25px;
+      margin-right: 25px;
+      margin-bottom: 25px;
+    }
+    .lista_habilidades > ul{
+      margin-left: 25px;
+    }
+    .lista_habilidades > ul > li{
+      padding: 25px 0px 25px 0px;
+    }
+  }
+  
+  /* pantallas medianas - de tablets y laptops  */
+  @media (min-width: 768px) {
+    body {
+      font-size:150%;
+    }
+  
+    .col-n-1{
+      grid-template-columns: 1fr;
+    }.col-n-2{
+      grid-template-columns: repeat(2, 1fr);
+    }.col-n-3{
+      grid-template-columns: repeat(3, 1fr);
+    }.col-n-4{
+      grid-template-columns: repeat(4, 1fr);
+    }.col-n-5{
+      grid-template-columns: repeat(5, 1fr);
+    }.col-n-6{
+      grid-template-columns: repeat(6, 1fr);
+    }.col-n-7{
+      grid-template-columns: repeat(7, 1fr);
+    }.col-n-8{
+      grid-template-columns: repeat(8, 1fr);
+    }.col-n-9{
+      grid-template-columns: repeat(9, 1fr);
+    }.col-n-10{
+      grid-template-columns: repeat(10, 1fr);
+    }.col-n-11{
+      grid-template-columns: repeat(11, 1fr);
+    }.col-n-12{
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
+
+
+    /* ............ pagina estudios ............ */
+    
+    
+    .caja_estudio_1_texto{
+      padding-left: 10px;
+      top: 35%;
+    }
+    .caja_estudio_2_texto{
+      bottom: 12%;
+    }
+
+    .caja_estudio_3_texto{
+      position: relative;
+      top: 30px;
+    }
+
+  }
+
+  /* pantallas grandes - pc en adelante */
+  @media (min-width: 1024px) {
+    body {
+      font-size:200%;
+    }
+    .col-g-1{
+      grid-template-columns: 1fr;
+    }.col-g-2{
+      grid-template-columns: repeat(2, 1fr);
+    }.col-g-3{
+      grid-template-columns: repeat(3, 1fr);
+    }.col-g-4{
+      grid-template-columns: repeat(4, 1fr);
+    }.col-g-5{
+      grid-template-columns: repeat(5, 1fr);
+    }.col-g-6{
+      grid-template-columns: repeat(6, 1fr);
+    }.col-g-7{
+      grid-template-columns: repeat(7, 1fr);
+    }.col-g-8{
+      grid-template-columns: repeat(8, 1fr);
+    }.col-g-9{
+      grid-template-columns: repeat(9, 1fr);
+    }.col-g-10{
+      grid-template-columns: repeat(10, 1fr);
+    }.col-g-11{
+      grid-template-columns: repeat(11, 1fr);
+    }.col-g-12{
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+
+    /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
+
+    #estudios{
+      margin-bottom: 0%;
+    }
+
+    /* ............ pagina estudios ............ */
+    .caja_estudio_1_texto{
+      padding-left: 10px;
+      top: 22%;
+    }
+    
+    .caja_estudio_2_texto{
+      bottom: 100%;
+    }
+
+  }
+  
+  
