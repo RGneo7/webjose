@@ -248,12 +248,8 @@ img {
   }
   nav{
     display:flex;
-    justify-content: center;
     align-items: center;
-  }
-  nav a{
-    font-weight: bold;
-    margin: 0px 2px;
+    justify-content: space-around;
   }
 
   .logo{
@@ -512,15 +508,6 @@ footer{
       display:flex;
       justify-content: flex-start;
       align-items: center;
-    }
-    
-    nav{
-      display:flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    nav a{
-      margin: 0px 5px;
     }
 
     .logo{
