@@ -257,6 +257,7 @@ img {
     justify-content: center;
   }
   nav a{
+    font-size:100% !important;
     margin: 0px 5px !important;
   }
 
@@ -296,7 +297,7 @@ main{
   line-height: 0.9;
   position: relative;
     padding-left: 10px;
-    top: 70%;
+    top: 2vh;
 }
 .icono_estudio_1{
   background-image: url('../img/estudios_simbolo_01.webp');
@@ -353,7 +354,7 @@ main{
 .caja_estudio_3_texto{
   line-height: 0.9;
   position: relative;
-  top: 30px;
+  top: 0px;
 }
 .icono_estudio_3{
   background-image: url('../img/estudios_simbolo_03.webp');
@@ -381,6 +382,7 @@ main{
   line-height: 1;
 }
 #habilidades > h1{
+  text-align: left;
   margin: 25px;
 }
 
@@ -388,7 +390,7 @@ main{
   background-image: url('../img/mano_con_raton.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   position: relative;
   min-height: 30vh;
   height: 40vh;
@@ -428,15 +430,14 @@ main{
 
 .img_servicio_1{
   background-image: url('../img/imagen_servicios.webp');
-  background-size: contain;
+  background-size: 20vh;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   min-height: 20vh;
-  width: 150%;
-  height: 60%;
+  width: 450%;
+  height: 450%;
   position: relative;
-  left: 0px;
-  top: 40%;
+  bottom: 0%;
 }
 
 .caja_servicio_1-1{
@@ -445,6 +446,8 @@ main{
 }
 
 .caja_servicio_2{
+  display: flex;
+  align-items: flex-end;
   position: relative;
   right: 10px;
 }
@@ -607,7 +610,7 @@ footer{
     }
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 45%;
+      top: 12vh;
     }
     .icono_estudio_1{
       position: relative;
@@ -624,8 +627,8 @@ footer{
       height: 30vh;
     }
     .caja_estudio_2_texto{
-      top: 0%;
-      padding: 25px 25px 0px 25px;
+      top: 10%;
+      padding: 0px 25px 0px 0px;
     }
     .icono_estudio_2{
       position: relative;
@@ -638,7 +641,7 @@ footer{
     .img_estudios_2{
       min-height: 40vh;
       left:0px;
-      bottom: 12vh;
+      bottom: 10vh;
     }
 
     .caja_estudio_3{
@@ -646,16 +649,21 @@ footer{
     }
     .img_estudios_3{
       min-height: 40vh;
-      left:0px;
-      bottom: 12vh;
+      /* left:0px;
+      bottom: 12vh; */
     }
 
 
     
     /* ............ pagina habilidades ............ */
-    .img_habilidad{
-      background-position: left;
-      height: 90vh;
+    #habilidades > h1{
+      text-align: right;
+    }
+    
+
+    .img_servicio_1{
+      background-size: 30vh;
+      left: 20px;
     }
     .lista_habilidades{
       border-radius: 25px;
@@ -723,15 +731,11 @@ footer{
     
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 35%;
-    }
-    .caja_estudio_2_texto{
-      bottom: 12%;
+      top: 10vh;
     }
 
     .caja_estudio_3_texto{
-      position: relative;
-      top: 30px;
+      top: 60px;
     }
 
   }
@@ -777,11 +781,15 @@ footer{
     /* ............ pagina estudios ............ */
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 22%;
+      top: 4vh;
     }
     
     .caja_estudio_2_texto{
-      bottom: 100%;
+      /* bottom: 5vh; */
+    }
+
+    .img_servicio_1{
+      background-size: 40vh;
     }
 
   }
