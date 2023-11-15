@@ -172,6 +172,11 @@ img {
   visibility: hidden;
 }
 
+.ocultar-m{
+  display: flex;
+  visibility: visible;
+}
+
 .z1{
   position:relative;
   z-index:1;
@@ -249,7 +254,10 @@ img {
   nav{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  nav a{
+    margin: 0px 5px !important;
   }
 
   .logo{
@@ -504,12 +512,15 @@ footer{
       font-size:120%;
     }
   
-    header h1{
+    /* header h1{
       display:flex;
       justify-content: flex-start;
       align-items: center;
-    }
+    } */
 
+    nav a{
+      margin: 0px 10px !important;
+    }
     .logo{
       display:flex;
       justify-content: flex-start;
@@ -520,6 +531,10 @@ footer{
     .ocultar-p{
       display: flex;
       visibility: visible;
+    }
+    .ocultar-m{
+      display: none;
+      visibility: hidden;
     }
     .grid-col-2{
       grid-column: span 2;
