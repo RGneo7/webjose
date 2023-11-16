@@ -205,6 +205,10 @@ img {
 .grid-v-center{
   align-items: center;
 }
+
+.grid-v-end{
+  align-items: flex-end;
+}
 .grid-h-derecha{
   justify-content: right;
 }
@@ -244,6 +248,8 @@ img {
     background-color: #000;
     color: #fff;
     padding: 10px 15px;
+    position: relative;
+    z-index: 3;
   }
   header img{
     display:flex;
@@ -269,9 +275,9 @@ img {
   }
 
 /*........................ MAIN ......................*/
-main{
+/* main{
   margin-bottom: 5vh;
-}
+} */
 
 
 /* ............ pagina inicio ................. */
@@ -304,7 +310,6 @@ main{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40%;
   min-height: 10vh;
 }
 .img_estudios_1{
@@ -314,7 +319,6 @@ main{
   background-position: right;
   position: relative;
   min-height: 20vh;
-  height: 100%;
 }
 
 .caja_estudio_2{
@@ -325,14 +329,13 @@ main{
 .caja_estudio_2_texto{
   line-height: 0.9;
   position: relative;
-  top: 35%;
+  top: 3vh;
 }
 .icono_estudio_2{
   background-image: url('../img/estudios_simbolo_02.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40%;
   min-height: 10vh;
 }
 .img_estudios_2{
@@ -340,10 +343,8 @@ main{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
   min-height: 30vh;
-  position:relative;
-  left:0px;
-  bottom: 0vh;
 }
 
 .caja_estudio_3{
@@ -361,7 +362,6 @@ main{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40%;
   min-height: 10vh;
 }
 
@@ -370,7 +370,7 @@ main{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 30vh;
+  min-height: 20vh;
   position:relative;
   left:0px;
   bottom: 0vh;
@@ -392,8 +392,7 @@ main{
   background-repeat: no-repeat;
   background-position: left;
   position: relative;
-  min-height: 30vh;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 .lista_habilidades{
@@ -453,11 +452,10 @@ main{
 }
 .caja_servicio_3{
   line-height: 1;
-  padding: 15px;
+  padding: 25px 15px;
 }
 
 /* ............ pagina de contacto ............ */
-
 .img_contacto_1{
   background-image: url('../img/imagen_de_contacto.webp');
   background-size: contain;
@@ -493,7 +491,7 @@ main{
   margin-bottom: 25px;
 }
 
-  /*............FOOTER...........*/
+/*............FOOTER...........*/
 footer{
     padding: 10px;
     background-color: #000;
@@ -514,12 +512,6 @@ footer{
     body {
       font-size:120%;
     }
-  
-    /* header h1{
-      display:flex;
-      justify-content: flex-start;
-      align-items: center;
-    } */
 
     nav a{
       margin: 0px 10px !important;
@@ -592,75 +584,59 @@ footer{
     }.col-m-12{
       grid-template-columns: repeat(12, 1fr);
     }
-
-
-        
+ 
     .p_inicio{
       text-align: left;
     }
 
 
-    /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
-
+/* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
 
     /* ............ pagina estudios ............ */
     .caja_estudio_1{
-      height: 30vh;
       padding: 25px 0px 0px 0px;
     }
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 12vh;
+      top: 18vh;
     }
     .icono_estudio_1{
-      position: relative;
-      top: 15%;
+      min-height: 15vh;
     }
     .img_estudios_1{
-      min-height: 32vh;
+      min-height: 35vh;
       left:0px;
-      bottom: 7vh;
       padding-right: 2vw;
     }
 
-    .caja_estudio_2{
-      height: 30vh;
-    }
     .caja_estudio_2_texto{
-      top: 10%;
+      top: 8vh;
       padding: 0px 25px 0px 0px;
     }
     .icono_estudio_2{
-      position: relative;
-      top: 15%;
+      min-height: 15vh;
     }
     .icono_estudio_3{
-      position: relative;
-      top: 15%;
+      min-height: 15vh;
     }
     .img_estudios_2{
-      min-height: 40vh;
-      left:0px;
-      bottom: 10vh;
+      min-height: 35vh;
     }
 
-    .caja_estudio_3{
-      height: 30vh;
+
+    .caja_estudio_3_texto{
+      top: 15vh;
     }
     .img_estudios_3{
-      min-height: 40vh;
-      /* left:0px;
-      bottom: 12vh; */
+      min-height: 35vh;
     }
 
 
-    
-    /* ............ pagina habilidades ............ */
+/* ............ pagina habilidades ............ */
     #habilidades > h1{
       text-align: right;
     }
     
-
     .img_servicio_1{
       background-size: 30vh;
       left: 20px;
@@ -711,33 +687,21 @@ footer{
       grid-template-columns: repeat(12, 1fr);
     }
 
+/* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
 
-
-
-
-
-
-
-
-
-
-
-
-    /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
-
-
-    /* ............ pagina estudios ............ */
-    
-    
+    /* ............ pagina estudios ............ */    
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 10vh;
+      top: 17vh;
+    }
+    
+    .caja_estudio_2_texto{
+      top:7vh;
     }
 
     .caja_estudio_3_texto{
-      top: 60px;
+      top: 10vh;
     }
-
   }
 
   /* pantallas grandes - pc en adelante */
@@ -772,20 +736,23 @@ footer{
     }
 
 
-    /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
-
+/* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
     #estudios{
       margin-bottom: 0%;
     }
 
-    /* ............ pagina estudios ............ */
+/* ............ pagina estudios ............ */
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 4vh;
+      top: 10vh;
     }
     
     .caja_estudio_2_texto{
-      /* bottom: 5vh; */
+      top:3vh;
+    }
+
+    .caja_estudio_3_texto{
+      top: 5vh;
     }
 
     .img_servicio_1{
