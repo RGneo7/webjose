@@ -328,6 +328,7 @@ img {
   background-position: right;
   position: relative;
   min-height: 30vh;
+  bottom: 0vh;
 }
 
 .caja_estudio_2{
@@ -354,6 +355,7 @@ img {
   background-position: center;
   position: relative;
   min-height: 30vh;
+  bottom: 0vh;
 }
 
 .caja_estudio_3{
