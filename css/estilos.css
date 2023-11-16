@@ -204,16 +204,25 @@ img {
 
 .grid-v-center{
   align-items: center;
+  align-content: center;
+  align-self: center;
 }
 
 .grid-v-end{
   align-items: flex-end;
+  align-content: end;
+  align-self: end;
 }
 .grid-h-derecha{
   justify-content: right;
 }
 .grid-h-center{
   justify-content: center;
+}
+.flex-end{
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
 }
 
 .col-1{
@@ -296,14 +305,14 @@ img {
 /* ............ pagina estudios ............ */
 .caja_estudio_1{
   width: 100%;
-  height: auto;
+  height: 30vh;
   padding: 5px 5px 0px 5px;
 }
 .caja_estudio_1_texto{
   line-height: 0.9;
   position: relative;
     padding-left: 10px;
-    top: 2vh;
+    top: 6.5vh;
 }
 .icono_estudio_1{
   background-image: url('../img/estudios_simbolo_01.webp');
@@ -318,18 +327,18 @@ img {
   background-repeat: no-repeat;
   background-position: right;
   position: relative;
-  min-height: 20vh;
+  min-height: 30vh;
 }
 
 .caja_estudio_2{
   width: 100%;
-  height: auto;
+  height: 30vh;
   padding: 5px 5px 0px 5px;
 }
 .caja_estudio_2_texto{
   line-height: 0.9;
   position: relative;
-  top: 3vh;
+  top: 2.5vh;
 }
 .icono_estudio_2{
   background-image: url('../img/estudios_simbolo_02.webp');
@@ -349,7 +358,7 @@ img {
 
 .caja_estudio_3{
   width: 100%;
-  height: auto;
+  height: 30vh;
   padding: 5px 5px 0px 5px;
 }
 .caja_estudio_3_texto{
@@ -598,7 +607,7 @@ footer{
     }
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 18vh;
+      top: 15vh;
     }
     .icono_estudio_1{
       min-height: 15vh;
@@ -607,10 +616,11 @@ footer{
       min-height: 35vh;
       left:0px;
       padding-right: 2vw;
+      bottom: 4.5vh;
     }
 
     .caja_estudio_2_texto{
-      top: 8vh;
+      top: 6vh;
       padding: 0px 25px 0px 0px;
     }
     .icono_estudio_2{
@@ -620,15 +630,17 @@ footer{
       min-height: 15vh;
     }
     .img_estudios_2{
-      min-height: 35vh;
+      min-height: 40vh;
+      bottom: 5vh;
     }
 
 
     .caja_estudio_3_texto{
-      top: 15vh;
+      top: 5vh;
     }
     .img_estudios_3{
       min-height: 35vh;
+      bottom: 3vh;
     }
 
 
@@ -692,22 +704,22 @@ footer{
     /* ............ pagina estudios ............ */    
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 17vh;
+      top: 11vh;
     }
     
     .caja_estudio_2_texto{
-      top:7vh;
+      top:3.5vh;
     }
 
     .caja_estudio_3_texto{
-      top: 10vh;
+      top: 2vh;
     }
   }
 
   /* pantallas grandes - pc en adelante */
   @media (min-width: 1024px) {
     body {
-      font-size:200%;
+      font-size:180%;
     }
     .col-g-1{
       grid-template-columns: 1fr;
@@ -737,18 +749,18 @@ footer{
 
 
 /* ::::::::::::::::::::::: MAIN ::::::::::::::::::::::: */
-    #estudios{
+    /* #estudios{
       margin-bottom: 0%;
-    }
+    } */
 
 /* ............ pagina estudios ............ */
     .caja_estudio_1_texto{
       padding-left: 10px;
-      top: 10vh;
+      top: 7vh;
     }
     
     .caja_estudio_2_texto{
-      top:3vh;
+      top:2vh;
     }
 
     .caja_estudio_3_texto{
